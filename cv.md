@@ -23,6 +23,7 @@ I want to become a react.js developer. I have studied html and css on my own and
 
 ## Code example
 [My solution of «Counting Duplicates» codewars task](https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1)
+```
 function duplicateCount(text){
   let myChars = {}
   let count = 0;
@@ -39,6 +40,7 @@ function duplicateCount(text){
   }
   return count
 }
+```
 
 ## Experience
 
