@@ -390,17 +390,16 @@ footer {
 }
 
 @media screen and (max-width: 513px) {
+   header {
+      flex-direction: column;
+      align-items: center;
+   }
    .fa-react {
       display: none;
    }
 }
 
 @media screen and (max-width: 425px) {
-   header {
-      flex-direction: column;
-      align-items: center;
-   }
-
    .avatar {
       margin-bottom: 20px;
    }
