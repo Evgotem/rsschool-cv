@@ -2,12 +2,14 @@
    margin: 0;
    padding: 0;
    font-family: "Roboto", sans-serif;
+   scroll-behavior: smooth;
 }
 
 body {
    background: #4D4D4D;
    background-image: url("../images/gray-texture.jpg");
 }
+
 
 .container {
    max-width: 1100px;
@@ -43,7 +45,7 @@ li {
 /* === Header === */
 
 header {
-   padding: 25px 15px;
+   padding: 60px 15px 25px 15px;
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -79,11 +81,6 @@ header {
    margin-bottom: 10px;
 }
 
-.social {
-   display: flex;
-   flex-direction: column;
-   align-items: flex-end;
-}
 .social__nav {
    display: flex;
    width: 100%;
@@ -118,12 +115,12 @@ header {
     text-decoration: none;
     color: #ffffff;
     font-size: 50px;
-    transition: all 0.3s;
+    transition: color 0.3s ease-in;
 }
 
 .social__item:hover {
-   opacity: 0.7;
-   transition: all 0.3s;
+   color: #A87D78;
+   transition: color 0.3s ease-in;
 }
 
 .fa-vk {
@@ -137,7 +134,10 @@ header {
 .fa-github {
    color: #000000;
 }
-
+.footer__item .fa-github {
+   margin-right: 5px;
+   color: #ffffff;
+}
 .fa-discord {
    color: #5C68F1;
 }
@@ -318,8 +318,8 @@ pre {
 /* === Footer === */
 
 footer {
-   padding: 10px;
-   background: #808080;
+   padding: 5px 10px;
+   background: #24292E;;
 }
 
 .footer-list {
@@ -329,7 +329,7 @@ footer {
    justify-content: space-between;
    align-items: center;
    margin: 0;
-   color: #000000;
+   color: #ffffff;
 }
 
 .footer-list p,
@@ -344,7 +344,55 @@ footer {
 .footer__item:first-child {
    display: flex;
    align-items: center;
-   flex-direction: column;
+}
+
+/* === burger menu === */
+.menu__body {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 50;
+   min-height: 36px;
+}
+.menu__body::before {
+   content:'';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: #24292E;
+   z-index: 3;
+}
+.menu__list {
+   position: relative;
+   display: flex;
+   justify-content: space-between;
+   padding: 7px 15px;
+   list-style: none;
+   z-index: 5;
+   overflow: auto;
+}
+.menu__list li {
+   margin: 0;
+}
+
+.menu__link {
+   text-decoration: none;
+   color: #ffffff;
+   font-weight: 500;
+   transition: color 0.3s ease-out;
+   font-size: 18px;
+}
+
+.menu__link:hover {
+   color: #A87D78;
+   transition: color 0.3s ease-in;
+}
+
+.burger {
+   display: none;
 }
 
 /* === @media === */
@@ -393,19 +441,106 @@ footer {
    .experience__item:hover .experience__img {
       box-shadow: none; 
    }
+
+   .burger {
+      display: block;
+      position: absolute;
+      right: 10px;
+      top: 8px;
+      width: 30px;
+      height: 20px;
+      z-index: 5;
+      cursor: pointer;
+   }
+
+   .burger:before,
+   .burger:after {
+      content: '';
+      background-color: #ffffff;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+   }
+
+   .burger:before {
+      top: 0;
+      transition: all 0.3s ease 0s;
+   }
+
+   .burger:after {
+      bottom: 0;
+      transition: all 0.3s ease 0s;
+   }
+
+   .burger span {
+      position: absolute;
+      background: #ffffff;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      top: 9px;
+      transition: all 0.3s ease 0s;
+   }
+
+   .burger.active:before {
+      transform: rotate(135deg);
+      top: 9px;
+      transition: all 0.3s ease 0s;
+   }
+
+   .burger.active:after {
+      transform: rotate(-135deg);
+      bottom: 9px;
+      transition: all 0.3s ease 0s;
+   }
+
+   .burger.active span {
+      transform: scale(0);
+      transition: all 0.3s ease 0s;
+   }
+
+   .menu__list {
+      position: absolute;
+      z-index: 2;
+      display: block;
+      background: #24292E;
+      right: 0;
+      top: -670%;
+      transition: transform 0.3s ease-in-out;
+      box-sizing: border-box;
+   }
+
+   .menu__list.active {
+      transform: translateY(277px);
+      transition: transform 0.3s ease-in-out;
+   }
+
+   .menu__list li {
+      padding: 15px 25px;
+   }
+
+   .menu__link:hover {
+      color: #ffffff;
+   }
+
+   body.lock {
+      overflow: hidden;
+   }
 }
 
 @media screen and (max-width: 513px) {
    .fa-react {
       display: none;
    }
-}
-
-@media screen and (max-width: 425px) {
    header {
       flex-direction: column;
       align-items: center;
    }
+}
+
+@media screen and (max-width: 425px) {
+   
 
    .avatar {
       margin-bottom: 20px;
