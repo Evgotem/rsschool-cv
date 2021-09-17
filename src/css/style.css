@@ -119,7 +119,7 @@ header {
 }
 
 .social__item:hover {
-   color: #A87D78;
+   color: #F4CA16;
    transition: color 0.3s ease-in;
 }
 
@@ -228,12 +228,11 @@ header {
 /* === code example === */
 
 pre {
-   font-family: "JetBrains Mono", monospace;
-   font-weight: 300;
+   font-weight: 500;
    padding: 15px;
    font-size: 14px;
    overflow-x: auto;
-   background: #24292E;
+   background: #282C34;
    border-radius: 10px;
    box-shadow: -5px 5px 15px 3px rgba(0, 0, 0, 0.5);
 }
@@ -387,7 +386,7 @@ footer {
 }
 
 .menu__link:hover {
-   color: #A87D78;
+   color: #F4CA16;
    transition: color 0.3s ease-in;
 }
 
