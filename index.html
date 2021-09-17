@@ -5,18 +5,13 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="stylesheet" href="src/css/style.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-         href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
-         rel="stylesheet"
-      />
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-         href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap"
-         rel="stylesheet"
-      />
+      <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap" rel="stylesheet" />
       <title>Rsschool cv</title>
    </head>
    <body>
@@ -27,7 +22,7 @@
             </div>
             <ul class="menu__list">
                <li>
-                  <a href="#about" class="menu__link" >About</a>
+                  <a href="#about" class="menu__link">About</a>
                </li>
                <li>
                   <a href="#skills" class="menu__link">Skills</a>
@@ -296,6 +291,7 @@
                Duplicates» codewars task:
             </h2>
             <pre>
+               <code class="javascript">
 function duplicateCount(text){
    let myChars = {}
    let count = 0;
@@ -312,6 +308,7 @@ function duplicateCount(text){
    }
    return count
 }
+               </code>
             </pre>
          </section>
          <section class="experience" id="experience">
@@ -494,5 +491,9 @@ function duplicateCount(text){
       </footer>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
       <script src="src/js/script.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+      <script>
+         hljs.initHighlightingOnLoad();
+      </script>
    </body>
 </html>
