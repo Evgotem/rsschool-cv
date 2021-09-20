@@ -77,7 +77,11 @@ header {
    align-items: center;
 }
 
-.info {
+.info__list {
+  list-style: none;
+}
+
+.info__item {
    margin-bottom: 10px;
 }
 

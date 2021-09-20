@@ -28,3 +28,4 @@ menuLinks.forEach(link => {
    });
 });
 
+console.log();
