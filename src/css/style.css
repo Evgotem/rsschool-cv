@@ -185,38 +185,37 @@ header {
     font-size: 19px;
     margin: 0;
     border-radius: 4px;
+    width: 100%;
 }
 
 .tool__html {
    background-color: #EC6127;
-   width: 85%;
 }
 
 .tool__css {
-    width: 70%;
     background-color: #0C70B3;
 }
 
 .tool__js {
-    width: 40%;
     background-color: #D9C206;
     color: #000000;
 }
 
 .tool__react {
-    width: 25%;
     background-color: #61DAFB;
     color: #000000;
 }
+.tool__redux {
+    background-color: #845cc3;;
+    color: #ffffff;
+}
 
 .tool__ui {
-   width: 60%;
-   background-color: #A579DA;
+   background-color: #B434A2;
    color: #ffffff;
 }
 
 .tool__git {
-   width: 50%;
    background-color: #001D26;
    color: #ffffff;
 }
